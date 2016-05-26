@@ -10,8 +10,9 @@ ArgResults argResults;
 
 void main(List<String> arguments) {
   final ArgParser argParser = new ArgParser()
-    ..addOption('name', abbr: 'n', help: 'Please specify your Cloudinary Cloud Name')..addOption('key', abbr: 'k', help: 'Please specify your Cloudinary API KEY')..addOption(
-        'secret', abbr: 's', help: 'Please specify your Cloudinary API SECRET')
+    ..addOption('name', abbr: 'n', help: 'Please specify your Cloudinary Cloud Name')
+    ..addOption('key', abbr: 'k', help: 'Please specify your Cloudinary API KEY')
+    ..addOption('secret', abbr: 's', help: 'Please specify your Cloudinary API SECRET')
     ..addFlag('help', abbr: 'h', negatable: false, help: "Displays this help information.");
 
   argResults = argParser.parse(arguments);
