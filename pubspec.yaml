@@ -1,0 +1,8 @@
+name: cloudinary_backup
+version: 0.0.1
+description: A simple console application.
+dependencies:
+  w_transport: "^2.4.0"
+  http: "^0.11.3+7"
+  json_object: any
+  args: '>=0.13.2 <0.14.0'
