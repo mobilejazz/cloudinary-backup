@@ -11,9 +11,9 @@ To get this working, you need to do 4 things.
 2. Clone this repository: git clone https://github.com/mobilejazz/cloudinary-backup.git
 2. CD into the folder in which the repository is stored locally.
 3. Run 'pub get' to retrieve the dependencies required.
-4. Run the in any of the following forms:
-	4.1: pub run bin/main.dart --name=<cloud_name> --key=<app_key> --secret=<app_secret>
-	4.2: pub run bin/main.dart -n=<cloud_name> -k=<app_key> -s=<app_secret>
+4. Run the script in any of the following forms:
+	4.1: pub run bin/main.dart --name=cloud_name_here --key=app_key_here --secret=app_secret_here
+	4.2: pub run bin/main.dart -ncloud_name_here -kapp_key_here -sapp_secret_here
 
 The script will the do it's things and you will have a backup for your cloudinary files.
 
