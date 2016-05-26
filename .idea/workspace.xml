@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a1baacf-83ff-4a02-8e35-5c1422cbe8f9" name="Default" comment="">
+    <list default="true" id="4a1baacf-83ff-4a02-8e35-5c1422cbe8f9" name="Default" comment="Updating the Readme.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="cloudinary-backup.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -116,7 +116,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -722,12 +722,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1464286542393</updated>
-      <workItem from="1464286544424" duration="8452000" />
+      <workItem from="1464286544424" duration="8491000" />
     </task>
+    <task id="LOCAL-00001" summary="Updating the Readme.">
+      <created>1464296317570</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1464296317570</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8452000" />
+    <option name="totallyTimeSpent" value="8491000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -764,6 +772,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updating the Readme." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating the Readme." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
