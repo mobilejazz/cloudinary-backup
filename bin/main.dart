@@ -87,20 +87,28 @@ Future downloadPictures(String CLOUD_NAME, String API_KEY, String API_SECRET) as
 
     int parsed_file_size = ((file_size / 1024) / 1024).round();
     int parsed_size = ((size / 1024) / 1024).round();
-    print('The path is ${file.path}. File Size: ${parsed_file_size}MB. Total Size: ${parsed_size}MB');
+    print('File ${file.path} saved. File Size: ${parsed_file_size}MB. Total Size: ${green(parsed_size.toString() + 'MB')}');
   }
   int parsed_size = ((size / 1024) / 1024).round();
-  print("Completed!! A total of ($parsed_size) MB have been used.");
+  print(green("Completed!! A total of ($parsed_size) MB have been used."));
+  exit(1);
 }
 
-/// CREATE A PEN TO PRINT WITH THE DESIRED
-/// STYLE.
-AnsiPen yellow(String text){
+/// Yellow AnsiPen
+AnsiPen yellow(String text) {
   AnsiPen yellow = new AnsiPen()..yellow();
   return yellow(text);
 }
 
-AnsiPen red(String text){
+
+/// Red AnsiPen
+AnsiPen red(String text) {
   AnsiPen red = new AnsiPen()..red();
   return red(text);
+}
+
+/// Green AnsiPen
+AnsiPen green(String text) {
+  AnsiPen green = new AnsiPen()..green();
+  return green(text);
 }
