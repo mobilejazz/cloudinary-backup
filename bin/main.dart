@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:ansicolor/ansicolor.dart';
 import 'package:args/args.dart';
 import 'package:http/http.dart' as http;
 import 'package:json_object/json_object.dart';
@@ -21,26 +22,29 @@ void main(List<String> arguments) {
   final String API_KEY = argResults['key'];
   final String API_SECRET = argResults['secret'];
 
-  if (CLOUD_NAME == null) {
-    handleError("Missing required argument: name. Use either --name=<Cloudinary Cloud Name> OR -n<Cloudinary Cloud Name>");
+  if (argResults['help']) {
+    printHelp(argParser);
+    exit(2);
+  } else if (CLOUD_NAME == null) {
+    handleError(argParser, "Missing required argument: name\nUse either --name=<Cloudinary Cloud Name> OR -n<Cloudinary Cloud Name>");
   } else if (API_KEY == null) {
-    handleError("Missing required argument: key. Use either --key=<Cloudinary APP KEY> OR -k<Cloudinary APP KEY>");
+    handleError(argParser, "Missing required argument: key\nUse either --key=<Cloudinary APP KEY> OR -k<Cloudinary APP KEY>");
   } else if (API_SECRET == null) {
-    handleError("Missing required argument: secret. Use either --secret=<Cloudinary APP SECRET> OR -s<Cloudinary APP SECRET>");
-  } else if (argResults['help']) {
-    print("""
-      ** HELP **
-      ${argParser.usage}
-    """);
+    handleError(argParser, "Missing required argument: secret\nUse either --secret=<Cloudinary APP SECRET> OR -s<Cloudinary APP SECRET>");
   } else {
     configureWTransportForVM();
     downloadPictures(CLOUD_NAME, API_KEY, API_SECRET);
   }
 }
 
-void handleError(String msg) {
-  stderr.writeln(msg);
+void handleError(ArgParser argParser, String msg) {
+  stderr.writeln(red(msg));
+  printHelp(argParser);
   exit(2);
+}
+
+void printHelp(ArgParser argParser) {
+  print("${yellow('===== HELP =====')} \n${argParser.usage}\n");
 }
 
 Future downloadPictures(String CLOUD_NAME, String API_KEY, String API_SECRET) async {
@@ -87,4 +91,16 @@ Future downloadPictures(String CLOUD_NAME, String API_KEY, String API_SECRET) as
   }
   int parsed_size = ((size / 1024) / 1024).round();
   print("Completed!! A total of ($parsed_size) MB have been used.");
+}
+
+/// CREATE A PEN TO PRINT WITH THE DESIRED
+/// STYLE.
+AnsiPen yellow(String text){
+  AnsiPen yellow = new AnsiPen()..yellow();
+  return yellow(text);
+}
+
+AnsiPen red(String text){
+  AnsiPen red = new AnsiPen()..red();
+  return red(text);
 }
